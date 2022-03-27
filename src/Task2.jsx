@@ -13,7 +13,8 @@ export const Task2 = () => {
       let str='';
       e.target.value?.split(' ')
         ?.map((eSpace) => {
-          eSpace?.split('.')?.map((eDot) => {eDot?.split(',')?.map((eComma) => {str+=eComma + ' ';})})});return str;})())
+          eSpace?.split('.')?.map((eDot) => {eDot?.split(',')?.map((eComma) => 
+          {str+=eComma + ' ';})})});return str;})().split(' ').sort((a, b) => a.length - b.length).join(' '))
   }
   useEffect(() => {
 
